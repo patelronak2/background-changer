@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Background Changer</h1>
+        <!-- Options to choose the type of Background -->
+        <div class="background d-flex justify-content-center align-items-end p-5">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="image" name="background-type" class="custom-control-input">
+                <label class="custom-control-label" for="image">Image</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="gradient" name="background-type" checked class="custom-control-input">
+                <label class="custom-control-label" for="gradient">Gradient</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="solid" name="background-type"  class="custom-control-input">
+                <label class="custom-control-label" for="solid">Solid Color</label>
+            </div>
+        </div>
+
+        <!-- Option to change the solid color of background -->
+        <div class="my-4" id="solid-color">
+            <form class="form-inline">
+                <fieldset>
+                    <legend>Choose RGB value for Solid Color</legend>
+                    <div class="form-row">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="red">R </label>
+                            <input type="number" class="form-control mx-2" id="red" value="" min="0" max="255">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="red">G </label>
+                            <input type="number" class="form-control mx-2" id="green" value="" min="0" max="255">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="red">B </label>
+                            <input type="number" class="form-control mx-2" id="blue" value="" min="0" max="255">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm mb-2">Change Color</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Options for Gradient Type Background -->
+        <div class="my-4" id="gradient-color">
+            <!-- Direction for Gradient Type -->
+            <fieldset>
+                <legend>Choose Gradient Direction</legend>
+                <div class="px-2">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="bottom" name="gradient-direction"  checked class="custom-control-input">
+                        <label class="custom-control-label" for="bottom">Top to bottom</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="left" name="gradient-direction"  class="custom-control-input">
+                        <label class="custom-control-label" for="left">Right to Left</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="right" name="gradient-direction"  class="custom-control-input">
+                        <label class="custom-control-label" for="right">Left to Right</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="top" name="gradient-direction"  class="custom-control-input">
+                        <label class="custom-control-label" for="top">Bottom to Top</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="diagonal" name="gradient-direction"  class="custom-control-input">
+                        <label class="custom-control-label" for="diagonal">Diagonal</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Colors for Gradient Type -->
+            <div class="my-4" id="solid-color">
+                <form class="form-inline d-flex align-items-end">
+                    <div class="row">
+                        <fieldset class="col-md-6">
+                            <legend>RGB for first Color</legend>
+                            <div class="form-row">
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">R </label>
+                                    <input type="number" class="form-control mx-2" id="red-1" value="" min="0" max="255">
+                                </div>
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">G </label>
+                                    <input type="number" class="form-control mx-2" id="green-1" value="" min="0" max="255">
+                                </div>
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">B </label>
+                                    <input type="number" class="form-control mx-2" id="blue-1" value="" min="0" max="255">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="col-md-6">
+                            <legend>RGB for second Color</legend>
+                            <div class="form-row">
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">R </label>
+                                    <input type="number" class="form-control mx-2" id="red-2" value="" min="0" max="255">
+                                </div>
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">G </label>
+                                    <input type="number" class="form-control mx-2" id="green-2" value="" min="0" max="255">
+                                </div>
+                                <div class="form-group mx-sm-2 mb-2">
+                                    <label for="red">B </label>
+                                    <input type="number" class="form-control mx-2" id="blue-2" value="" min="0" max="255">
+                                </div>
+                            </div>
+                        </fieldset> 
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm mb-2">Change Color</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- options for Image -->
+        <div class="my-4" id="image-url">
+            <form class="form-inline">
+                <fieldset>
+                    <legend>Enter URL for an Image</legend>
+                    <div class="form-row">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="url">URL </label>
+                            <input type="url" class="form-control mx-2" id="url" >
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm mb-2">Change background</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
