@@ -1,4 +1,4 @@
-# background-changer
+# Background-Changer
 Simple Background Changer built using jQuery
 
 Best for Desktop View
